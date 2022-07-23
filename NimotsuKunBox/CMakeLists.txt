@@ -3,6 +3,10 @@ PROJECT(NimotsuKunBox)
 
 SET(CMAKE_CXX_STANDARD 11)
 
+# 配置编译器以指定编码读取代码源文件
+ADD_COMPILE_OPTIONS("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
+ADD_COMPILE_OPTIONS("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+
 MESSAGE("Current CMakeLists.txt dir:\n${CMAKE_CURRENT_SOURCE_DIR}")
 
 # 配置头文件查找路径
